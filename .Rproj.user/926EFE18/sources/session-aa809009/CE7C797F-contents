@@ -4,7 +4,17 @@ title: "Employability of Fresh Graduates from Universities in Singapore"
 
 I decided to dive into researching the job prospects of fresh graduates from Singaporean universities for a few reasons. As a third-year student myself, the looming specter of post-grad life is getting real, and this research is not only interesting but also helps me wrap my head around what's waiting for me after graduation. There's also this perpetual stereotype in Singapore that an individual will be more successful if he/she comes from a certain university or takes certain courses (FASS graduates aren't paid well..?). With the changing job scene in Singapore and the ever-rising cost of living — not to forget the COVID-19 economic downturn — employability is a concern that plagues many soon-to-be-graduates and fresh graduates.
 
-The dataset that I have chosen depicts a Graduate Employment Survey carried out among fresh graduates of local universities from 2013 to 2021. The dataset can be found here: <https://beta.data.gov.sg/collections/415/view>
+The dataset that I have chosen depicts a Graduate Employment Survey carried out among fresh graduates of local universities from 2013 to 2021. The dataset can be found here: <https://beta.data.gov.sg/collections/415/view>. It consists of data from
+
+- Nanyang Technological University (NTU)
+
+- National University of Singapore (NUS)
+
+- Singapore Institute of Technology (SIT)
+
+- Singapore Management University (SMU)
+
+- Singapore University of Social Sciences (SUSS)
 
 I first began by finding the total mean employment rate by year, by combining all of the individual employment rates across the universities each year. 
 
@@ -20,3 +30,4 @@ So, that's the first issue out of the way. Is it getting increasingly more diffi
 <iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_2/"> </iframe>
 ```
 
+We see that the average employment rate in 2021 — the most recent year in the dataset — is highest for SMU 
