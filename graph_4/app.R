@@ -9,7 +9,7 @@ library(data.table)
 # Define UI
 ui <- fluidPage(
   
-  titlePanel("Scatter Plot of Employment Rate vs Gross Monthly Mean Income by University"),
+  titlePanel("Employment Rate vs Gross Monthly Mean Income by University"),
   
   sidebarLayout(
     
@@ -52,7 +52,7 @@ server <- function(input, output, session) {
       labs(
         x = "Overall Employment Rate",
         y = "Gross Monthly Mean Income",
-        title = "Scatter Plot of Employment Rate vs Gross Monthly Mean Income",
+        title = "Employment Rate vs Gross Monthly Mean Income",
         subtitle = if (input$university == "All") "All Universities" else input$university,
         color = "University"
       ) +

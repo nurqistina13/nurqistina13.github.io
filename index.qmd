@@ -21,18 +21,12 @@ The dataset that I have chosen depicts a Graduate Employment Survey carried out 
 I first began by finding the total mean employment rate by year, by combining all of the individual employment rates across the universities each year. 
 
 ```{=html}
-<iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph/"> </iframe>
+<iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/personal_app/"> </iframe>
 ```
 
 It can be observed that there has been an overall increase in the employment rate over the years. This is notable despite the economic downturn caused by COVID-19. Perhaps this can be attributed to industry trends, where several sectors experiencing growth in Singapore — such as finance, AI, and the green economy — place value on the skills possessed by fresh graduates.
 
 So, that's the first issue out of the way. Is it getting increasingly more difficult for fresh graduates to be employed? The short answer is no. Now let's take a look at how this mean employment rate varies for fresh graduates from different universities. 
-
-```{=html}
-<iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_2/"> </iframe>
-```
-
-We see that the average employment rate in 2021 — the most recent year in the dataset — is highest for SMU.  
 
 ```{=html}
 <iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_3/"> </iframe>
