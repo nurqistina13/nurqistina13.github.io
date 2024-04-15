@@ -38,3 +38,13 @@ We see that the average employment rate in 2021 — the most recent year in the 
 <iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_3/"> </iframe>
 ```
 
+Graph 4
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_4/"> </iframe> 
+```
+
+Graph 5
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_5/"> </iframe> 
+```
+

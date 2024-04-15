@@ -19,7 +19,7 @@ ui <- fluidPage(
     ),
     
     mainPanel(
-      plotOutput("scatterPlot", height = "1200px", width = "1000px")  # Set height and width
+      plotOutput("scatterPlot", height = "650px", width = "750px")  # Set height and width
     )
   )
 )

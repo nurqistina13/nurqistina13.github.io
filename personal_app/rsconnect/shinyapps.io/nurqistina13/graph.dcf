@@ -1,11 +1,11 @@
 name: graph
-title: graph
+title:
 username: nurqistina13
 account: nurqistina13
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11641641
-bundleId: 8484118
+bundleId: 8494971
 url: https://nurqistina13.shinyapps.io/graph/
 version: 1
 asMultiple: FALSE
