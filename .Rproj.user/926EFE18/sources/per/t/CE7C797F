@@ -3,7 +3,7 @@
     "path": "~/Desktop/y3s2/nm2207/github/nurqistina13.github.io/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "878587966",
+    "hash": "3087593600",
     "contents": "",
     "dirty": false,
     "created": 1711952524091.0,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "1296:160.5",
-        "cursorPosition": "16,48",
+        "cursorPosition": "15,0",
         "scrollLine": "5"
     },
     "folds": "",
-    "lastKnownWriteTime": 1712393465,
+    "lastKnownWriteTime": 1712891581,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1712393465825,
+    "last_content_update": 1712891581291,
     "read_only": false,
     "read_only_alternatives": []
 }

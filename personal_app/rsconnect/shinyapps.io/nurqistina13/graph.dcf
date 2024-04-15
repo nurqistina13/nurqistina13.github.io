@@ -5,9 +5,9 @@ account: nurqistina13
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11641641
-bundleId: 8461278
+bundleId: 8484118
 url: https://nurqistina13.shinyapps.io/graph/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: app 1.R|mean_employment_2021.csv
+ignoredFiles: app 1.R|employment_rate_by_year.csv

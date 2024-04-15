@@ -1,12 +1,12 @@
-name: graph_2
-title: graph_2
+name: graph_3
+title: graph_3
 username: nurqistina13
 account: nurqistina13
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 11684515
-bundleId: 8484035
-url: https://nurqistina13.shinyapps.io/graph_2/
+appId: 11728447
+bundleId: 8493808
+url: https://nurqistina13.shinyapps.io/graph_3/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE

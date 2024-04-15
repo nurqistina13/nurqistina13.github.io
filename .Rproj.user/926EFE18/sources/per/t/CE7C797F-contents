@@ -16,6 +16,8 @@ The dataset that I have chosen depicts a Graduate Employment Survey carried out 
 
 - Singapore University of Social Sciences (SUSS)
 
+- Singapore University of Technology and Design (SUTD)
+
 I first began by finding the total mean employment rate by year, by combining all of the individual employment rates across the universities each year. 
 
 ```{=html}
@@ -30,4 +32,9 @@ So, that's the first issue out of the way. Is it getting increasingly more diffi
 <iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_2/"> </iframe>
 ```
 
-We see that the average employment rate in 2021 — the most recent year in the dataset — is highest for SMU 
+We see that the average employment rate in 2021 — the most recent year in the dataset — is highest for SMU.  
+
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_3/"> </iframe>
+```
+
