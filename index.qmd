@@ -1,7 +1,7 @@
 ---
 title: "Job Prospects of Fresh Graduates from Universities in Singapore"
 ---
-I decided to dive into researching the job prospects of fresh graduates from Singaporean universities for a few reasons. As a third-year student myself, the looming specter of post-grad life is getting real, and this research is not only interesting but also helps me wrap my head around what's waiting for me after graduation. There's also this perpetual stereotype in Singapore that an individual will be more successful if he/she comes from a certain university or takes certain courses (FASS graduates aren't paid well..?). With the changing job scene in Singapore and the ever-rising cost of living — not to forget the COVID-19 economic downturn — employability is a concern that plagues many soon-to-be-graduates and fresh graduates.
+I decided to dive into researching the job prospects of fresh graduates from Singaporean universities for a few reasons. As a third-year student myself, the looming specter of post-grad life is getting real, and this research is not only interesting but also helps me wrap my head around what's waiting for me after graduation. There's also this perpetual stereotype in Singapore that an individual will be more successful if he/she comes from a certain university or takes certain courses eg. graduates from the arts and humanities aren't paid well. With the changing job scene in Singapore and the ever-rising cost of living — not to forget the COVID-19 economic downturn — employability is a concern that plagues many soon-to-be-graduates and fresh graduates.
 
 The dataset that I have chosen depicts a Graduate Employment Survey carried out among fresh graduates of local universities from **2013 to 2021**. The dataset can be found here: <https://beta.data.gov.sg/collections/415/view>. It consists of data from
 
@@ -47,8 +47,13 @@ The data reveals a positive correlation between Gross Monthly Mean Income and Ov
 There are differences in the spread of the data points however, but this could be due to the difference in the number of respondents from each university. Interestingly, contrary to popular belief, universities with a higher global ranking, such as NUS, have a larger spread of employment rate and mean monthly income. 
 
 ### 4. Does the degree matter?
+Similar to the previous graph, the following graph shows the relationship between employment rate and gross monthly mean income, but this time, faceted by the graduate's degree. 
 
 ```{=html}
 <iframe height="400" width="100%" frameborder="no" src="https://nurqistina13.shinyapps.io/graph_5/"> </iframe> 
 ```
 
+It is important to note that these values represent those of fresh graduates only, and not the majority of workers in a particular job sector. It is likely that employment rate and gross monthly income would be higher with more time and experience. 
+
+### 5. Conclusion
+While a graduate's choice of university and degree can certainly play a role in their career trajectory and income potential, it's important to recognize that these are just a few of the many factors that contribute to an individual's employability and overall career success.

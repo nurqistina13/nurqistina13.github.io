@@ -1,10 +1,10 @@
-# Define updated pastel colors
-pastel_colors <- c("#FF3333", "#FF9966", "#FFC000", "#66CC66", "#3366FF", "#CC66CC")
-
 # Load required libraries
 library(shiny)
 library(ggplot2)
 library(data.table)
+
+# Define updated pastel colors
+pastel_colors <- c("#FF3333", "#FF9966", "#FFC000", "#66CC66", "#3366FF", "#CC66CC")
 
 # Define UI
 ui <- fluidPage(
@@ -14,7 +14,7 @@ ui <- fluidPage(
   sidebarLayout(
     
     sidebarPanel(
-      selectInput("university", "Select University:", choices = c("All", unique(data$university)), selected = "All"),
+      selectInput("university", "Select University:", choices = c("All", unique(data$university)), selected = "All", multiple = TRUE),
       checkboxInput("show_all", "Show All Universities", value = FALSE)
     ),
     
@@ -36,12 +36,17 @@ server <- function(input, output, session) {
     if (input$show_all) {
       data
     } else {
-      if (input$university == "All") {
+      if ("All" %in% input$university) {
         data
       } else {
-        data[data$university == input$university, ]
+        data[data$university %in% input$university, ]
       }
     }
+  })
+  
+  observe({
+    # Update the selected universities in the dropdown
+    updateSelectInput(session, "university", selected = input$university)
   })
   
   # Create scatter plot
@@ -53,7 +58,7 @@ server <- function(input, output, session) {
         x = "Overall Employment Rate",
         y = "Gross Monthly Mean Income",
         title = "Employment Rate vs Gross Monthly Mean Income",
-        subtitle = if (input$university == "All") "All Universities" else input$university,
+        subtitle = if ("All" %in% input$university) "All Universities" else paste(input$university, collapse = ", "),
         color = "University"
       ) +
       scale_color_manual(values = setNames(pastel_colors, unique(data$university))) +
@@ -66,12 +71,17 @@ server <- function(input, output, session) {
         axis.text.x = element_text(size = 14),
         axis.text.y = element_text(size = 14),
         plot.title = element_text(size = 20, hjust = 0.5),  # Title size and center alignment
-        strip.text = element_text(size = 18)  # Facet title size
+        strip.text = element_text(size = 12)  # Smaller facet title size
       ) +
-      facet_wrap(~ university, ncol = 3)  # Display all facets in one row with 3 columns
+      facet_wrap(~ university, ncol = 3, labeller = as_labeller(c("All" = "All Universities", .default = label_value)))
   })
   
 }
 
 # Run the Shiny app
 shinyApp(ui = ui, server = server)
+
+
+
+
+

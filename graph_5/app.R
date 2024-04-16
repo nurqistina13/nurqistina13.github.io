@@ -1,15 +1,15 @@
 # Load required libraries
-library(ggplot2)
 library(shiny)
 library(shinyWidgets)
+library(ggplot2)
 library(dplyr)
 
-# Define combined_data by reading the CSV file
-combined_data <- read.csv("employment_rate_vs_gross_monthly_mean_income_by_degree.csv")
+# Read the dataset
+combined_data <- read.csv("combined_employment_gross_monthly_mean_by_category.csv")
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Employment Rate vs Gross Monthly Mean Income by Degree"),
+  titlePanel("Overall Employment Rate vs Gross Monthly Mean Income"),
   
   sidebarLayout(
     sidebarPanel(
@@ -17,10 +17,11 @@ ui <- fluidPage(
         inputId = "selected_degree",
         label = "Select Degree:",
         choices = sort(unique(combined_data$degree)),
-        selected = "Arts",
-        multiple = TRUE,
-        options = list(`actions-box` = TRUE)
-      )
+        options = list(`actions-box` = TRUE),
+        multiple = TRUE
+      ),
+      actionButton("select_all", "Select All", icon("check")),
+      actionButton("deselect_all", "Deselect All", icon("times"))
     ),
     
     mainPanel(
@@ -30,28 +31,52 @@ ui <- fluidPage(
 )
 
 # Define server logic
-server <- function(input, output) {
+server <- function(input, output, session) {
+  
+  observe({
+    if(input$select_all > 0) {
+      updatePickerInput(session, "selected_degree", selected = sort(unique(combined_data$degree)))
+    }
+  })
+  
+  observe({
+    if(input$deselect_all > 0) {
+      updatePickerInput(session, "selected_degree", selected = character(0))
+    }
+  })
+  
+  filtered_data <- reactive({
+    req(combined_data)  # Require that combined_data is available
+    
+    if(is.null(input$selected_degree) || "All" %in% input$selected_degree) {
+      combined_data %>% 
+        filter(!is.na(employment_rate_overall) & !is.na(gross_monthly_mean))
+    } else {
+      combined_data %>% 
+        filter(degree %in% input$selected_degree) %>% 
+        filter(!is.na(employment_rate_overall) & !is.na(gross_monthly_mean))
+    }
+  })
   
   output$scatter_plot <- renderPlot({
     
-    # Filter data based on selected degrees
-    filtered_data <- combined_data %>% 
-      filter(degree %in% input$selected_degree)
+    req(filtered_data())  # Require that filtered_data is available
     
     # Create scatter plot
-    ggplot(filtered_data, aes(x = gross_monthly_mean_income, y = employment_rate_overall)) +
+    ggplot(filtered_data(), aes(x = employment_rate_overall, y = gross_monthly_mean)) +
       geom_point() +
-      scale_x_continuous(limits = c(2000, 7500)) +
-      scale_y_continuous(limits = c(60, 100)) +
-      facet_wrap(~ degree, scales = "free") +
+      facet_wrap(~ degree, scales = "free", ncol = 3) +
       labs(
-        title = "Employment Rate vs Gross Monthly Mean Income by Degree",
-        x = "Gross Monthly Mean Income",
-        y = "Employment Rate Overall"
+        title = "Overall Employment Rate vs Gross Monthly Mean Income",
+        x = "Overall Employment Rate",
+        y = "Gross Monthly Mean Income"
       ) +
-      theme_minimal()
+      theme_minimal() +
+      xlim(60, 100) +
+      ylim(2000, 7000)
   })
 }
 
 # Run the application
 shinyApp(ui = ui, server = server)
+

@@ -5,8 +5,9 @@ account: nurqistina13
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11758288
-bundleId: 8494958
+bundleId: 8498702
 url: https://nurqistina13.shinyapps.io/graph_5/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: employment_rate_vs_gross_monthly_mean_income_by_degree.csv|gross_monthly_mean_income_2021_by_university.csv
